@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .offer-letter {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  .offer-letter-bullet{
+    margin-left: 2vw;
+  }
+  .offer-letter-textbox{
+    width: 7vw;
+    height:3vh;
+    background-color: rgb(202, 203, 205);
+  }
+  h1 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    color: #666;
+    line-height: 1.6;
+  }
+  
+  .company-logo {
+    max-width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .signature {
+    font-weight: bold;
+  }
