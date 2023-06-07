@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import BasicDocument from "./BasicDocument";
-
+import BasicDocument from "../BasicDocument";
 import OfferLetterDisplay from "./OfferLetterDisplay";
 import OfferLetterTable from "./OfferLetterTable";
 import OfferLetterFooter from "./OfferLetterFooter";
+import { Row, Col } from "react-bootstrap";
 
 const OfferLetterGenerator = () => {
   let [pdf, setPdf] = useState(0);
@@ -45,7 +45,7 @@ const OfferLetterGenerator = () => {
       const reader = new FileReader();
 
       // Define the function to be executed when the file is loaded
-      reader.onload = function (e) {
+      reader.onload = function(e) {
         const contents = e.target.result;
         const data = JSON.parse(contents);
         setVarName(Object.keys(data));
@@ -66,31 +66,35 @@ const OfferLetterGenerator = () => {
 
   return (
     <>
-      {pdf == 0 && (
+      {pdf === 0 && (
         <>
-          <div className="page-heading">Offer Letter Builder</div>
-          <div className="container">
-            <OfferLetterDisplay
-              varName={varName}
-              setVarName={setVarName}
-              varValue={varValue}
-              setVarValue={setVarValue}
-              activeState={activeState}
-              setActiveState={setActiveState}
-              recruiterName={recruiterName}
-              companyName={companyName}
-            />
-            <OfferLetterTable
-              varName={varName}
-              setVarName={setVarName}
-              varValue={varValue}
-              setVarValue={setVarValue}
-              activeState={activeState}
-              setActiveState={setActiveState}
-              recruiterName={recruiterName}
-              companyName={companyName}
-            />
-          </div>
+          <Row>
+            <Col md={6}>
+              <OfferLetterDisplay
+                varName={varName}
+                setVarName={setVarName}
+                varValue={varValue}
+                setVarValue={setVarValue}
+                activeState={activeState}
+                setActiveState={setActiveState}
+                recruiterName={recruiterName}
+                companyName={companyName}
+              />
+            </Col>
+            <Col md={6}>
+              <OfferLetterTable
+                varName={varName}
+                setVarName={setVarName}
+                varValue={varValue}
+                setVarValue={setVarValue}
+                activeState={activeState}
+                setActiveState={setActiveState}
+                recruiterName={recruiterName}
+                companyName={companyName}
+              />
+            </Col>
+          </Row>
+
           <OfferLetterFooter
             setPdf={setPdf}
             exportTemplate={exportTemplate}
@@ -98,7 +102,7 @@ const OfferLetterGenerator = () => {
           />
         </>
       )}
-      {pdf == 1 && (
+      {pdf === 1 && (
         <BasicDocument
           varValue={varValue}
           recruiterName={recruiterName}

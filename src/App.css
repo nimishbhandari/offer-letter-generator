@@ -1,34 +1,25 @@
-.container{
-  display: flex;
-  flex-direction: row;
-  margin: auto;
-  width: 90vw;
-  height: 65vh;
-  padding: auto;
-  justify-content: space-evenly;
-  box-sizing: border-box;
-}
-.container-footer{
+.container-footer {
   display: flex;
   flex-direction: row;
   width: 90vw;
   height: 10vh;
   justify-content: space-evenly;
 }
-.footer-content{
+.footer-content {
   display: flex;
   width: 50%;
   flex-direction: row;
   justify-content: space-evenly;
 }
 
-.textbox{
-  width:10vw;
-  height:5vh;
+.textbox {
+  width: 10vw;
+  height: 5vh;
+  padding: 1rem;
 }
-.page-heading{
+.page-heading {
   font-weight: 600;
-  font-size:25px;
+  font-size: 25px;
   background: #fff;
   color: #000;
   padding: 10px;
@@ -40,43 +31,34 @@
   border-left: 20px solid #ff5f00;
   border-right: 20px solid #ff5f00;
   border-radius: 5px 55px 5px 55px;
-    
 }
 
-.offer-letter-display{
-  border: solid;
-  width: 90%;
-  height: 80%;
+.offer-letter-display {
   border-radius: 10px;
   margin: 5vh;
-  background: #a5a4a4a9;
   color: #000;
   padding: 10px;
   line-height: 1.7em;
-  box-shadow: 0 2px 10px 0 #cac9c9;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   justify-content: space-evenly;
 }
 
-.offer-letter-table{
-  border: solid;
-  width: 90%;
-  height: 80%;
+.offer-letter-table {
   border-radius: 10px;
-  margin: 5vh;  
-  background: #a5a4a4a9;
+  margin: 5vh;
   color: #000;
   padding: 30px;
   line-height: 1.7em;
-  box-shadow: 0 2px 10px 0 #cac9c9;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
   display: gid;
   box-sizing: border-box;
   justify-content: space-evenly;
 }
 
-.letter{
+.letter {
   display: flex;
   flex-direction: column;
   height: 60%;
@@ -84,10 +66,10 @@
   margin: auto;
   padding: inherit;
 }
-.letter-body{
+.letter-body {
   padding: 10px;
 }
-.table-content{ 
+.table-content {
   padding: 20px;
   margin: 5px;
   display: flex;
@@ -99,48 +81,39 @@
 
 /* ************************BUTTON CSS****************** */
 
-.wrapper{
+.wrapper {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.btn{
-  display: block;
+.btn {
   width: 200px;
-  height: 40px;
-  line-height: 40px;
-  font-size: 18px;
+  font-size: 1rem;
   font-family: sans-serif;
-  text-decoration: none;
   color: #333;
-  border: 2px solid #333;
+  border-radius: 10px;
   letter-spacing: 2px;
   text-align: center;
-  position: relative;
-  transition: all .35s;
+  padding: 0.8rem;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s;
+  margin: 1rem;
 }
 
-.btn span{
-  position: relative;
-  z-index: 2;
+.btn:hover {
+  transform: scale(0.9);
 }
 
-.btn:after{
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  transition: all .35s;
+.btn2 {
+  margin: 0px;
+  width: 100px;
+  padding: 0.2rem;
+  background-color: #d11a2a;
+  color: white;
 }
 
-.btn:hover{
-  color: #444343;
-}
-
-.btn:hover:after{
-  width: 100%;
+.btn2:hover {
+  color: white;
 }

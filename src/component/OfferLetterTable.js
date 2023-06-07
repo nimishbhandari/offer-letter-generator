@@ -44,7 +44,7 @@ const OfferLetterTable = ({
                 }}
               />
               <button
-                className="btn"
+                className="btn btn2"
                 onClick={() => {
                   let curState = [...activeState];
                   curState[key] = 0;

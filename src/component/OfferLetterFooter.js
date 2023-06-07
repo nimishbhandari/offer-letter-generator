@@ -1,9 +1,10 @@
 import React from "react";
+import { Row, Col } from "react-bootstrap";
 
 const OfferLetterFooter = ({ setPdf, exportTemplate, importTemplate }) => {
   return (
-    <div className="container-footer">
-      <div className="footer-content">
+    <Row>
+      <Col md={6}>
         <button
           className="btn"
           onClick={() => {
@@ -12,8 +13,8 @@ const OfferLetterFooter = ({ setPdf, exportTemplate, importTemplate }) => {
         >
           Save Offer Letter
         </button>
-      </div>
-      <div className="footer-content">
+      </Col>
+      <Col md={3}>
         <button
           className="btn"
           onClick={() => {
@@ -22,19 +23,18 @@ const OfferLetterFooter = ({ setPdf, exportTemplate, importTemplate }) => {
         >
           Export Template
         </button>
-        <div>
-          <input
-            type="button"
-            value="Import Template"
-            className="btn"
-            onClick={() => {
-              importTemplate();
-            }}
-          />
-        </div>
-      </div>
-      {/* Import Template</button> */}
-    </div>
+      </Col>
+      <Col md={3}>
+        <input
+          type="button"
+          value="Import Template"
+          className="btn"
+          onClick={() => {
+            importTemplate();
+          }}
+        />
+      </Col>
+    </Row>
   );
 };
 
